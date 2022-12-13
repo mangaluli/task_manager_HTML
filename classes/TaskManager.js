@@ -4,6 +4,7 @@ export default class TaskManager {
   constructor() {
     this.tasks = [];
 
+    // Stores the, converted to Task, locally stored objects into (this.tasks) array.
     if (typeof localStorage.getItem('tasks') === 'string') {
       this.tasks = JSON.parse(localStorage.getItem('tasks'));
       this.tasks.forEach((object, index) => this.tasks[index] = Object.assign(new Task(), object));
@@ -34,4 +35,3 @@ export default class TaskManager {
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 }
-

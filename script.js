@@ -30,8 +30,9 @@ function render() {
 
   // Add new Task
   button_add.addEventListener('click', () => {
-    let description = button_add.parentElement.parentElement.children[0].children[0].value;
-    manager.addTask(description);
+    let input = button_add.parentElement.parentElement.children[0].children[0];
+    manager.addTask(input.value);
+    input.value = '';
     render();
   });
 
@@ -60,10 +61,11 @@ function render() {
 
 let manager = new TaskManager();
 
+// Tip's! - Only on your 1st visit.
 if (localStorage.getItem('tipped') != 'true') {
-  manager.addTask('✅ = Complete -->');
-  manager.addTask('✏️ = Save -->');
-  manager.addTask('🗑️ = Delete -->');
+  manager.addTask('✅ Complete ➡️');
+  manager.addTask('✏️ Save ➡️');
+  manager.addTask('🗑️ Delete ➡️');
   manager.addTask('I did this one already', true);
   localStorage.setItem('tipped', true);
 }

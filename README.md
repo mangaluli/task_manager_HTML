@@ -1,9 +1,6 @@
-Title: 
-  JS homework - 1.
+#JS homework - 1.
   
-Description: 
-  A todo list.
+##A todo list.
 
-CDN's:
-  Bootstrap
-  Font-Awesome
+###Bootstrap
+###Font-Awesome

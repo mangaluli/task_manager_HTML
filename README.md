@@ -1,2 +1,3 @@
-# task_manager_HTML
- 
+JS homework - 1.
+
+A todo list

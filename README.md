@@ -2,8 +2,9 @@
   
 ### A todo list.
 
-#### Bootstrap
-#### Font-Awesome
+## CDN's:
+  #### Bootstrap
+  #### Font-Awesome
 
 
 

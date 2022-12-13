@@ -59,4 +59,13 @@ function render() {
 }
 
 let manager = new TaskManager();
+
+if (localStorage.getItem('tipped') != 'true') {
+  manager.addTask('✅ = Complete -->');
+  manager.addTask('✏️ = Save -->');
+  manager.addTask('🗑️ = Delete -->');
+  manager.addTask('I did this one already', true);
+  localStorage.setItem('tipped', true);
+}
+
 render();

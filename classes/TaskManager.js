@@ -21,7 +21,6 @@ export default class TaskManager {
   }
 
   updateTask(id, description) {
-    console.log(`updateTask(${id}) ${description})`);
     this.tasks.filter(task => task.id == id)[0].set('description', description);
     this.updateLocalStorage();
   }

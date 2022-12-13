@@ -1,9 +1,9 @@
 # JS homework - 1.
   
-## A todo list.
+### A todo list.
 
-### Bootstrap
-### Font-Awesome
+#### Bootstrap
+#### Font-Awesome
 
 
 

@@ -2,8 +2,7 @@
   
 ### A todo list.
 An iterface to manupulate a locally stored array of "tasks"
-\n
-\n
+<br><br>
 ### **CDN's:**
 - #### Bootstrap
 - #### Font-Awesome

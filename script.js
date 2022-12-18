@@ -32,6 +32,7 @@ function render() {
   button_add.addEventListener('click', () => {
     let input = button_add.parentElement.parentElement.children[0].children[0];
     manager.addTask(input.value);
+    manager.updateLocalStorage();
     input.value = '';
     render();
   });
@@ -40,6 +41,7 @@ function render() {
   button_complete.forEach(button => button.addEventListener('click', () => {
     let id = button.parentElement.dataset.id;
     manager.completeTask(id);
+    manager.updateLocalStorage();
     render();
   }));
 
@@ -48,6 +50,7 @@ function render() {
     let id = button.parentElement.dataset.id;
     let description = button.parentElement.parentElement.children[0].children[0].value;
     manager.updateTask(id, description);
+    manager.updateLocalStorage();
     render();
   }));
 
@@ -55,6 +58,7 @@ function render() {
   button_delete.forEach(button => button.addEventListener('click', () => {
     let id = button.parentElement.dataset.id;
     manager.deleteTask(id);
+    manager.updateLocalStorage();
     render();
   }));
 }
@@ -67,6 +71,8 @@ if (localStorage.getItem('tipped') != 'true') {
   manager.addTask('✏️ Save ➡️');
   manager.addTask('🗑️ Delete ➡️');
   manager.addTask('I did this one already', true);
+  manager.updateLocalStorage();
+
   localStorage.setItem('tipped', true);
 }
 

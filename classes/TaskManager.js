@@ -13,22 +13,18 @@ export default class TaskManager {
 
   addTask(description, completed = false) {
     this.tasks.push(new Task(description, completed));
-    this.updateLocalStorage();
   }
 
   deleteTask(id) {
     this.tasks = this.tasks.filter(task => task.id != id);
-    this.updateLocalStorage();
   }
 
   updateTask(id, description) {
     this.tasks.filter(task => task.id == id)[0].set('description', description);
-    this.updateLocalStorage();
   }
 
   completeTask(id) {
     this.tasks.filter(task => task.id == id)[0].set('completed', true);
-    this.updateLocalStorage();
   }
 
   updateLocalStorage() {
